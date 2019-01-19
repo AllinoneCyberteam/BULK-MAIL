@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+body {
+  background-color: lightgreen;
+}
+p {
+  text-align: center;
+  color: red;
+}
+div.ex2 {
+  border: 2px solid black;
+  outline: #4CAF50 solid 10px;
+  margin: auto;
+  width: 250px;
+  padding: 25px;
+  box-sizing: border-box;
+  background-color: lightblue;
+}
+</style>
+</head>
+<body>
+     <div class="ex2"><h1><p>Sent Mail</p></h1>
+  </div>
+
+
+    <form class = "site-form" action="/accounts/email/" method="post">
+
+        {% csrf_token %}
+       <p> <br>Your email: <input type="text" name="username">
+        <br>Password: <input type="text" name="password">
+        <br>Subject: <input type="text" name="subj">
+        <br>Body: <input type="text" name="body">
+        <br><input type="file" name="mail" accept="file_extension">
+        <input type="submit" value="mail">
+       </p>
+    </form>
+ <nav>
+       <ul>
+           <li>
+               <form class="logout-link" action="/accounts/logout/" method="post">
+                {% csrf_token %}
+                   <p> <button type="submit">Logout</button></p>
+               </form>
+           </li>
+       </ul>
+   </nav>
+
+
+</body>
+</html>

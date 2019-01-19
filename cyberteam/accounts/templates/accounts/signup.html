@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+     <style>
+body {
+  background-color: lightgreen;
+}
+p {
+  text-align: center;
+  color: red;
+}
+div.ex2 {
+  border: 2px solid black;
+  outline: #4CAF50 solid 10px;
+  margin: auto;
+  width: 300px;
+  padding: 10px;
+  box-sizing: border-box;
+  background-color: lightblue;
+}
+</style>
+</head>
+<body>
+  <div class="ex2">
+      <h1><p>SIGNUP</p></h1></div>
+  <form class = "site-form" action="/accounts/signup/" method="post">
+   {% csrf_token %}
+   {{form}}
+   <input type="submit" value="Signup">
+   </form>
+</body>
+</html>
