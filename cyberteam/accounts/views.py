@@ -33,7 +33,7 @@ def email_view(request):
             gmail_appPassword = ps
 
             sent_from = us
-            text = body
+            text = body+"  (SENT FROM BULK-MAIL-SENDER, Allinone Cyverteam, https://allinonecyberteam.com/cyberteam.co.in/) "
 
             msg = MIMEText(text)
             #SenderAddress = us
